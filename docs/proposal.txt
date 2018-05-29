@@ -1,4 +1,0 @@
-Proposal
-- Visualize the sorting algorithms and track runtime
-- use different objects to visualize the sorting
-- could be useful for cs teachers in the future for explaining the sorting algorithm.
