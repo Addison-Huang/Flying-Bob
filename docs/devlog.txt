@@ -1,1 +1,46 @@
-Devlog
+Flying <Insert Something Here> 
+Jerry Ye
+Shayan Chowdhury
+Addison Huang
+pd 02
+---------------------
+Programming 
+
+
+/////////// Zone of Reflection \\\\\\\\\\\
+------------------------------------------
+OBSTACLES OVERCOME
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+UNRESOLVED ISSUES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+COOL STUFF LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+MID-DEVELOPMENT DESIGN CHANGES
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+LESSONS LEARNED
+~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+ ______   ______   __   __   __       ______   _______     
+/_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
+\:::_ \ \\::::_\/_\:\ \\ \ \\:\ \    \:::_ \ \\::::__\/__  
+ \:\ \ \ \\:\/___/\\:\ \\ \ \\:\ \    \:\ \ \ \\:\ /____/\ 
+  \:\ \ \ \\::___\/_\:\_/.:\ \\:\ \____\:\ \ \ \\:\\_  _\/ 
+   \:\/.:| |\:\____/\\ ..::/ / \:\/___/\\:\_\ \ \\:\_\ \ \ 
+    \____/_/ \_____\/ \___/_/   \_____\/ \_____\/ \_____\/ 
+==============================================================
+||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+
+
+2018-05-28
+--------------------------------------------------------------
+Addison Huang :: Checked over proposal + to-do list 
+Shayan Chowdhury :: Checked over proposal + to-do list 
+Jerry Ye    :: Fleshed out fully comprehensive proposal + Completed To-Do list 
+==============================================================
+
+2018-05-27
+--------------------------------------------------------------
+Addison Huang :: Brainstormed final project idea and agreed to do a programming application
+Shayan Chowdhury  :: Brainstormed final project idea and agreed to do a programming application
+Jerry Ye    :: Brainstormed final project idea and agreed to do a programming application
+==============================================================
