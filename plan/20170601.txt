@@ -1,1 +1,36 @@
+Team Flying Bob <Addison Huang, Jerry Ye, Shayan Chowdhury>
+APCS2 pd 2
+2017 05 31
 
+Plan
+
+Which jobs are most crucial?
+- Getting a green light for our proposal by using the advice Mr. Brown gave us 
+- Making our UML diagram
+- Making a flowchart for our driver class
+- Drawing our class hierarchy
+- Implementation of all of the classes before the class's functionality 
+
+Which components constitute core functionality (vs non-essential)?
+- Essential: Making a Student user and an Administrator user
+- Essential: add the ability for a student to choose classes and for an administrator to edit information
+- Essential: adding a login function
+- Essential: Programming a student's schedule using recursive backtracking
+- Non-essential: taking in data from a csv and writing out to a csv
+- Non-essential: printing out a program in reverse
+
+
+Which components are prerequisites for others?
+- Our UML, flowchart, and class hierarchy all need to be planned before our code is written
+- User abstract class must be implemented before student and administrator
+- All classes must be written before action can begin
+
+Which tasks can be delegated, and which must be collobaratively tackled?
+- All of the planning must be collobaratively tackled so each member of Team Bob will have an equal understanding of how to implement the code. This will facilitate writing the code as everyone will be on the same page. 
+- Writing code can be delegated after the MVP is done because everything after that is enhancing the user experience and not core functionality. 
+
+What is the timeline, and how does it accommodate setbacks, course changes?
+- Get the green light for our proposal (5/31)
+- Finish the flowchart, UML, and class hierarchy (6/1)
+- Finish the MVP (6/5)
+- Add non-essential functionality (6/8)
