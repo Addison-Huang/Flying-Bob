@@ -9,17 +9,23 @@ Which jobs are most crucial?
 - Making our UML diagram
 - Making a flowchart for our driver class
 - Drawing our class hierarchy
+- Implementation of all of the classes before the class's functionality 
 
 Which components constitute core functionality (vs non-essential)?
-- Our proposal 
-- Our plans (UML, flowchart, class hierarchy)
+- Essential: Our proposal 
+- Essential: Our plans (UML, flowchart, class hierarchy)
 
 Code:
-- Making a Student user and and Administrator user
-- add the ability for a student to choose classes and for an administrator to edit information
+- Essential: Making a Student user and and Administrator user
+- Essential: add the ability for a student to choose classes and for an administrator to edit information
+- Essential: Efficiently make use of all of the data structures we've used in class
+- Non-Essential: Adding encryption into our user login
+- Non-Essential: Adding the ability to seed large amounts of data 
 
 Which components are prerequisites for others?
 - Our UML, flowchart, and class hierarchy all need to be planned before our code is written
+- User abstract class must be implemented before student and administrator
+- All classes must be written before action can begin
 
 Which tasks can be delegated, and which must be collobaratively tackled?
 - All of the planning must be collobaratively tackled so each member of Team Bob will have an equal understanding of how to implement the code. This will facilitate writing the code as everyone will be on the same page. 
