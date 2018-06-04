@@ -1,0 +1,30 @@
+Team Flying Bob - Addison Huang, Shayan Chowdhury, Jerry Ye
+APCS2 pd2
+HW 57 -- Changes in Latitude, Changes in Attitude
+2018 06 04
+
+Which jobs are most crucial?
+-Creating skeletons of all of our classes and linking our classes together.
+-Making the MVP of our program.
+
+
+Which components constitute core functionality?
+-Essential: Coding our Student and Admin class to extend the User class
+-Essential: adding a login function
+-Essential: Writing the course class and allowing a student to choose courses
+-Essential: Programming a student's schedule
+
+Which components are prerequisites for others?
+-We need to write the abstract use class before the student and admin class.
+-Also, a course class needs to be written before a student can choose courses.
+-Lastly, programming a student's schedule will be completed after all the other classes are written
+
+Which tasks can be delegated, and which must be collaboratively tackled?
+-Writing the Student and the Admin class must be tackled together because they constitute the most to the code. If everyone tackles these together, everyone will have an equal idea of how to write the rest of the code. Also, writing the driver should be done together so everyone understands how the program is run.
+-Writing classes like LCourses, Courses, and LStudents can be delegated.
+
+What is the timeline, and how does it accommodate setbacks, course changes?
+Finish writng the Student and Admin class (6/5)
+Finish our MVP (6/6)
+Add non-essential functionality, finish testing, and submit (6/8)
+
