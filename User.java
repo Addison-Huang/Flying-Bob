@@ -1,30 +1,61 @@
-abstract class User() {
-    protected String username;
-    protected String password;
+import java.util.Stack;
 
-    public User(String u, String p) {
-	username = u;
-	password = p;
+public class Student extends User {
+
+    //instance variables
+    private int id;
+    private Course[] schedule;
+    private int grade;
+    private double gpa;
+
+    //accessors and mutators
+    public Course[] getSchedule() {
+	return schedule;
+    }
+
+    public Course[] setSchedule(Course[] s) {
+	Course[] temp = new Course[schedule.length];
+	schedule = s;
+	return temp;
     }
     
-    public String getUser() {
-	return username; 
+    public double getGPA() {
+	return gpa;
     }
 
-    public String setUser(String u) {
-	String tmp = username;
-	username = u;
-	return tmp;
-    }
-        
-    public String getPass() {
-	return password; 
-    }
-
-    public String setPass(String p) {
-	String tmp = password;
-	password  = p;
-	return tmp;
+    public int getGrade() {
+	return grade;
     }
     
+    public int getId() {
+	return id;
+    }
+	
+    public int setId(int n) {
+	int temp = id;
+	id = n;
+	return temp;
+    }
+
+    public void printSchedule() {
+	for (int i = 1; i <= schedule.length; i ++) {
+	    System.out.println(i + " " + schedule[i].getTeacher() + " " + schedule[i].getSubject());
+	}
+    }
+
+    public void printScheduleReverse() {
+	Stack<Course> reverser = new Stack();
+	for (Course x: schedule) {
+	    reverser.push(x);
+	}
+	while (! reverser.isEmpty()) {
+	    Course temp = reverser.peek();
+	    System.out.println(reverser.size() + " " + temp.getTeacher() + " " + temp.getSubject());
+	    reverser.pop();
+	}
+    }
+
+    public boolean chooseClasses() {
+	return true; 
+    }
 }
