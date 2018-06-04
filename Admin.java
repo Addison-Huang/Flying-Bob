@@ -11,15 +11,22 @@ public class Admin extends User{
 
     public Course removeCourse(Course c) {
 	//binary search
-	
-	
+		
     }
 
-    public Student addStudent() {}
+    public boolean addStudent(Student s, Course c) {
+	return true;
+    }
 
-    public Student removeStudent() {}
+    public boolean removeStudent(Student s) {
+	return true;
+    }
 
-    public Student getStudent(int id) {}
+    public Student getStudent(int id) {
+        return LStudent.getStudent(int id);
+    }
 
-    public boolean addStudentInfo(String info) {}
+    public boolean addStudentInfo(String info) {
+	return true;
+    }
 } 

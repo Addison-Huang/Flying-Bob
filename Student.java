@@ -8,6 +8,14 @@ public class Student extends User {
     private int grade;
     private double gpa;
 
+    public Student(int i, int g, int a) {
+	super.this();
+	id = i;
+	schedule = new Course[8];
+	grade = g;
+	gpa = a;
+    }
+
     //accessors and mutators
     public Course[] getSchedule() {
 	return schedule;

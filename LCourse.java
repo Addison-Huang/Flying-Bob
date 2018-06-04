@@ -2,10 +2,10 @@ import java.util.ArrayList;
 
 public class LCourse {
     //instance vars
-    private OrderedArrayList courses;
+    private ArrayList<Course> courses;
 
     public LCourse() {
-	courses = new OrderedArrayList();
+	courses = new ArrayList();
     }
     
     //methods

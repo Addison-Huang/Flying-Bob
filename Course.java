@@ -58,11 +58,11 @@ public class Course {
 	return temp;
     }
 
-    public String addStudent(Student s) {
+    public void addStudent(Student s) {
 	waitlist.add(s);
     }
 
-    public Student removeStudent(Student s) {
+    public boolean removeStudent(Student s) {
 	return waitlist.remove(s);
     }
 
