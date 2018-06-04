@@ -4,11 +4,15 @@ public class Admin extends User{
 	super.this();
     }
 
-    public Course addCourse() {
-	//thing
+    public Course addCourse(Course c) {
+	System.out.println(LCourses.addCourse(c));
+	return c;
     }
 
-    public Course removeCourse() {}
+    public Course removeCourse(Course c) {
+	//binary search
+	
+    }
 
     public Student addStudent() {}
 
