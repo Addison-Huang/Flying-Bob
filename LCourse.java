@@ -22,6 +22,11 @@ public class LCourse {
 	courses.add(c);
 	return "Added course " + c.getSubject() + "!";
     }
+
+    public String removeCourse(Course c) {
+	//need to implement
+	return "Removed Course " + c.getSubject() + "!";
+    }
 }
 
 

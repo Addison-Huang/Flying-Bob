@@ -19,7 +19,15 @@ public class LStudent {
 		return s;
 	}
     }
-    
+
+    public Student removeStudent(int id) {
+	Student s = getStudent(id);
+	for (int i = 0; i < students.size(); i ++) {
+	    if (students.get(i) == s) {
+		return students.remove(i);
+	    }
+	}
+    }
 }
     
     

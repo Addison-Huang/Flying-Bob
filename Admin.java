@@ -1,25 +1,25 @@
 public class Admin extends User{
 
     public Admin(String u, String p) {
-	super.this();
+	super.this(u, p);
     }
 
     public Course addCourse(Course c) {
-	System.out.println(LCourses.addCourse(c));
+	System.out.println(LCourse.addCourse(c));
 	return c;
     }
 
     public Course removeCourse(Course c) {
-	//binary search
-		
+	System.out.println(LCourse.removeCourse(c));
+	return c;
     }
 
     public boolean addStudent(Student s, Course c) {
-	return true;
+	return c.addStudent(s);
     }
 
-    public boolean removeStudent(Student s) {
-	return true;
+    public Student removeStudent(int id) {
+        return LStudent.removeStudent(id);
     }
 
     public Student getStudent(int id) {
