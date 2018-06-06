@@ -1,1 +1,33 @@
-d
+Team Flying Bob - Addison Huang, Shayan Chowdhury, Jerry Ye
+APCS2 pd2
+HW 58 -- Keep the Pointy End Pointing Upward
+2018 06 06
+
+Which jobs are most crucial?
+- Allow students to pick classes to waitlist themselves to 
+- Allow generation of schedules
+- Allow administrators to seed data for the purpose of demonstration
+- Integrate CSVs to store data so that it reamains after program ends 
+
+Which components constitute core functionality?
+- Essential: Coding our Student and Admin class to extend the User class(Completed)
+- Essential: adding a login function(Completed)
+- Essential: Writing the course class and allowing a student to choose courses(Will be completed on 6/6) 
+- Essential: Generating schedules using recursive backtracking(Will be completed on 6/6) 
+
+Which components are prerequisites for others?
+-We need to write the abstract use class before the student and admin class.
+-Also, a course class needs to be written before a student can choose courses.
+-Lastly, programming a student's schedule will be completed after all the other classes are written
+
+Which tasks can be delegated, and which must be collaboratively tackled?
+- We must tackle the generation of schedules and the functionality of students picking classes that they want to waitlist themselves to -- this is a complicated part of our core functionality that we will tackle on 6/6 via an online skype call. 
+- Implementation of CSVs can be delegated
+- Allow seeding of data by administrator for purpose of simulation can be delegated
+
+What is the timeline, and how does it accommodate setbacks, course changes?
+- Finish up flow of driver class allowing generation of schedules and allowing students to choose courses(Will be completed on 6/6 via a skype call at night)
+- Allow seeding of data for purpose of simulation(Will be completed on 6/7)
+- Add non-essential functionality(improve UI), finish testing(Will be completed on 6/7)
+To accomodate for setbacks: We will individually work on everything past the core functionality on 6/7, however, if we can't finish the generation of schedules and the waitlist procedure, we will work on it together via an online skype call on 6/7 as well. 
+
