@@ -29,6 +29,10 @@ LESSONS LEARNED
     \____/_/ \_____\/ \___/_/   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
+2018-06-05
+--------------------------------------------------------------
+Jerry Ye :: Wrote new and most updated plan + updated readme 
+==============================================================
 2018-06-04
 --------------------------------------------------------------
 Addison Huang :: Fixed bugs so the code could compile
@@ -36,19 +40,22 @@ Addison Huang :: Fixed bugs so the code could compile
 
 2018-06-03
 --------------------------------------------------------------
-Addison Huang :: Wrote the plan
+Addison Huang :: Wrote new and most updated plan 
+Jerry Ye :: Edited plan 
 ==============================================================
 
 2018-06-01
 --------------------------------------------------------------
 Addison Huang :: Wrote class skeletons
 Shayan Chowdhury :: Wrote class skeletons
+Jerry Ye :: Wrote class skeletons 
 ==============================================================
 
 2018-05-31
 --------------------------------------------------------------
 Addison Huang :: Completed the UML
 Shayan Chowdhury :: Completed the Flowchart
+Jerry Ye :: Worked with Shayan to complete flowchart
 ==============================================================
 2018-05-30
 --------------------------------------------------------------
