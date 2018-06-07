@@ -2,14 +2,14 @@ import java.util.ArrayList;
 
 public class LCourse {
     //instance vars
-    private ArrayList<Course> courses;
+    private static ArrayList<Course> courses;
 
     public LCourse() {
 	courses = new ArrayList();
     }
-    
+
     //methods
-    public void printCourses() {
+    public static void printCourses() {
 	String retVal = "Current List of Courses Available: \n";
 	
 	for (Course c : courses)
@@ -18,14 +18,18 @@ public class LCourse {
 	System.out.println(retVal);
     }
 
-    public String addCourse(Course c) {
+    public static String addCourse(Course c) {
 	courses.add(c);
 	return "Added course " + c.getSubject() + "!";
     }
 
-    public String removeCourse(Course c) {
+    public static String removeCourse(Course c) {
 	//need to implement
 	return "Removed Course " + c.getSubject() + "!";
+    }
+
+    public static ArrayList<Course> getCourses() {
+	return courses;
     }
 }
 

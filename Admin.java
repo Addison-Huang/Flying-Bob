@@ -4,29 +4,29 @@ public class Admin extends User {
         super(u, p);
     }
 
-    // public Course addCourse(Course c) {
-    //     System.out.println(LCourse.addCourse(c));
-    //     return c;
-    // }
+     public Course addCourse(Course c) {
+         System.out.println(LCourse.addCourse(c));
+         return c;
+     }
 
-    // public Course removeCourse(Course c) {
-    //     System.out.println(LCourse.removeCourse(c));
-    //     return c;
-    // }
+     public Course removeCourse(Course c) {
+         System.out.println(LCourse.removeCourse(c));
+         return c;
+     }
 
-    // public void addStudent(Student s, Course c) {
-    //     c.addStudent(s);
-    // }
+     public void addStudent(Student s, Course c) {
+         c.addStudent(s);
+     }
 
-    // public Student removeStudent(int id) {
-    //     return LStudent.removeStudent(id);
-    // }
+     public Student removeStudent(int id) {
+         return LStudent.removeStudent(id);
+     }
 
-    // public Student getStudent(int id) {
-    //     return LStudent.getStudent(id);
-    // }
+     public Student getStudent(int id) {
+         return LStudent.getStudent(id);
+     }
 
-    public boolean addStudentInfo(String info) {
+    public  boolean addStudentInfo(String info) {
         return true;
     }
 }
