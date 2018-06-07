@@ -1,6 +1,6 @@
 import java.util.Stack;
 
-public class Student extends User implements Comparable{
+public class Student extends User implements Comparable {
 
 	// instance variables
 	private int id;
@@ -64,29 +64,25 @@ public class Student extends User implements Comparable{
 			reverser.pop();
 		}
 	}
-  public int compareTo(Object a){
-    Student s = (Student)(a);
-    if (this.getGrade() > s.getGrade()){
-      return 1;
-    }
-    else if (this.getGrade() == s.getGrade()){
-      if (this.getGPA() > s.getGPA()){
-        return 1;
-      }
-      else if (this.getGPA() == s.getGPA()){
-        return 0;
-      }
-      else {
-        return -1;
-      }
-    }
-    else {
-      return -1;
-    }
-  }
+
+	public int compareTo(Object a) {
+		Student s = (Student) (a);
+		if (this.getGrade() > s.getGrade()) {
+			return 1;
+		} else if (this.getGrade() == s.getGrade()) {
+			if (this.getGPA() > s.getGPA()) {
+				return 1;
+			} else if (this.getGPA() == s.getGPA()) {
+				return 0;
+			} else {
+				return -1;
+			}
+		} else {
+			return -1;
+		}
+	}
 
 	public boolean chooseClasses() {
 		return true;
 	}
 }
-

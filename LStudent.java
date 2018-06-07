@@ -19,6 +19,7 @@ public class LStudent {
 			if (s.getId() == id)
 				return s;
 		}
+		return null;
 	}
 
 	public Student removeStudent(int id) {
@@ -28,5 +29,6 @@ public class LStudent {
 				return students.remove(i);
 			}
 		}
+		return null;
 	}
 }

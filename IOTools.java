@@ -6,7 +6,7 @@ import java.io.Writer;
 import java.io.FileWriter;
 
 public class IOTools {
-  public static final File save = new File("SaveData.csv");
+  public static final File save = new File("StudentData.csv");
 
   public static String readString() {
     Scanner sc = new Scanner(System.in);
@@ -14,6 +14,11 @@ public class IOTools {
   }
 
   public static String readLine() {
+    Scanner sc = new Scanner(System.in);
+    return sc.nextLine();
+  }
+
+  public static String readInt() {
     Scanner sc = new Scanner(System.in);
     return sc.nextLine();
   }
@@ -34,12 +39,14 @@ public class IOTools {
     writer.close();
   }
 
-  // public static void checkSave() throws FileNotFoundException, IOException {
-  // if (!save.exists()) {
-  // save.createNewFile();
-  // write("Name,Highscore,Money\n", false);
-  // }
-  // }
+  public static boolean checkSave() throws FileNotFoundException, IOException {
+    if (!save.exists()) {
+      save.createNewFile();
+      write("Username,Password,Grade,GPA\n", false);
+      return false;
+    }
+    return true;
+  }
 
   // //Asks for alias/name of the player before each game
   // public static void namePrompt(Player player) {
@@ -60,25 +67,5 @@ public class IOTools {
   // sleepTime = 20;
   // return sleepTime;
   // }
-
-  /*
-   * POSIX ONLY!!!! public static boolean checkSpace() throws InterruptedException
-   * { try { boolean retVal = false; int inChar;
-   * 
-   * //Switch into raw mode (read single chars) String[] rawCmd = {"/bin/sh",
-   * "-c", "stty raw </dev/tty"}; Runtime.getRuntime().exec(rawCmd).waitFor();
-   * 
-   * if( System.in.available() > 0 ) { //check if there's anything to read without
-   * blocking (thank the lord) inChar = System.in.read(); //if so, read it retVal
-   * = inChar == 32; //check if it's a space, and set retVal to true if it is }
-   * 
-   * //Switch into cooked mode (wait for ENTER/RETURN key) String[] cookedCmd =
-   * {"/bin/sh", "-c", "stty cooked </dev/tty"};
-   * Runtime.getRuntime().exec(cookedCmd).waitFor();
-   * 
-   * return retVal; } catch (IOException e) { //catch any weird values, and let
-   * user know. should continue running the game
-   * System.out.println("Error: Input not valid"); return false; } }
-   */
 
 }
