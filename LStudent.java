@@ -40,5 +40,9 @@ public class LStudent {
 	return null;
     }
 
+    public static int biggestID() {
+	return students.get(students.size()-1).getId();
+    }
+
 	
 }

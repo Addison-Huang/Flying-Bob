@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-
+e
 public class LCourse {
     //instance vars
     private static ArrayList<Course> courses = new ArrayList();
@@ -8,10 +8,11 @@ public class LCourse {
     public static void printCourses() {
 	String retVal = "Current List of Courses Available: \n";
 	
-	for (Course c : courses)
-	    retVal += c + "/n"; //make a toString for Course w/ subject, teacher
+	for (int i = 0; i < courses.size(); i++) {
+	    retVal += courses.get(i) + "/n"; //make a toString for Course w/ subject, teacher
 
 	System.out.println(retVal);
+    }
     }
 
     public static String addCourse(Course c) {
@@ -26,6 +27,10 @@ public class LCourse {
 
     public static ArrayList<Course> getCourses() {
 	return courses;
+    }
+
+    public static Course getCourse(int n) {
+	return courses.get(n);
     }
 }
 

@@ -8,6 +8,7 @@ public class Student extends User implements Comparable {
     private Course[] schedule;
     private int grade;
     private double gpa;
+    private ArrayList<Course> wants;
 
     static int stdIDs = 1;
 
@@ -17,9 +18,14 @@ public class Student extends User implements Comparable {
 	schedule = new Course[8];
 	grade = g;
 	gpa = a;
+	wants = new ArrayList();
     }
 
     // accessors and mutators
+
+    public ArrayList<Course> getWants() {
+	return wants;
+    }
     public Course[] getSchedule() {
 	return schedule;
     }
@@ -94,21 +100,25 @@ public class Student extends User implements Comparable {
 	}
 	else {
 	    LCourse.printCourses();
-	    System.out.println("Type the name of the courses you want to apply for. You must pick 5");
-	    for (int i = 0; i < 5; i ++) {
-		String a = IOTools.readLine();
-		ArrayList<Course> courses = LCourse.getCourses();
-		for (int j = 0; j < courses.size(); j ++) {
-		    if (a == courses.get(j).getSubject()) {
-			courses.get(j).addStudent(this);
-		    }
-		}
-	    }	     
+	    System.out.println("Type the number of the course you want to apply for. You must pick at least 5");
+	    System.out.println("Type -1 to leave when you are done");
+	    int i = 0;
+	    boolean leave = false;
+	    while (i < 5 && leave == false);
+	    int j = Integer.parseInt(IOTools.readLine());
+	    LCourse.getCourse(j).addStudent(this);
+	    wants.add(LCourse.getCourse(j));
+	    i++;
+	    if (j == -1 && i >= 5) {
+		return;
+	    }
+	        
 	}
     }
 
-    public String toString() {
-	return "name: " + username + " id: " + id + " GPA: " + gpa + " grade: " + grade;
-    }
+
+public String toString() {
+    return "name: " + username + " id: " + id + " GPA: " + gpa + " grade: " + grade;
+}
     
 }

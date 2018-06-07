@@ -8,13 +8,17 @@ public class Woo {// driver
 
     private User user;
    private boolean studentAccount;
-   public void loginPrompt() throws IOException, FileNotFoundException {
+  public void loginPrompt() throws IOException, FileNotFoundException {
 	System.out.println("Hi there! Welcome to Flying Bob's Programming Program!");
 	if (!IOTools.checkSave()) { // if save file doesn't exist, there's no way for a user to be returning
 	    makeAcct();
 	} else {
 	    if (hasAccount())
 		login();
+	    else
+		makeAcct();
+	
+	       
 	}
     }
 
@@ -104,14 +108,14 @@ public class Woo {// driver
 	int option = Integer.parseInt(IOTools.readLine());
 	switch (option) { //decided to try something new
 	case 1:
-          studentAccount = true;
-          return true;
+	    studentAccount = true;
+	    return true;
 	case 2:
-          studentAccount = true;
-          return false;
+	    studentAccount = true;
+	    return false;
 	case 3:
-          studentAccount = false;
-          return true;
+	    studentAccount = false;
+	    return true;
 	default: 
 	    System.out.println("Please input a valid option.");
 	    hasAccount();
@@ -125,29 +129,30 @@ public class Woo {// driver
 	System.out.println("Pass?");
 	String p = IOTools.readLine();
         if (studentAccount){
-          int id = LStudent.checkStudent(u,p);
-          if (id != -1){
-            user = LStudent.getStudent(id);
-            return;
-          }
-          else {
-            System.out.println("Incorrect combination. Try again.");
-            login();
-            return;
-          }
+	    int id = LStudent.checkStudent(u,p);
+	    if (id != -1){
+		user = LStudent.getStudent(id);
+		return;
+	    }
+	    else {
+		System.out.println("Incorrect combination. Try again.");
+		login();
+		return;
+	    }
         }
 	// add a way to check and return bool whether this set of data exists in csv
         if (u.equals("admin") && p.equals("admin")){
-          user = new Admin(u,p);
-	  mainMenu2();
+	    user = new Admin(u,p);
+	    mainMenu2();
         }
         else {
-          System.out.println("Incorrect combination. Try again.");
-          login();
-          return;
+	    System.out.println("Incorrect combination. Try again.");
+	    login();
+	    return;
+	}
     }
-        System.out.println("Great job, we've logged you in!");
-    }
+    
+   
     public void makeAcct() {
 	System.out.println("Username?");
 	String u = IOTools.readLine();
@@ -161,6 +166,7 @@ public class Woo {// driver
         user = new Student(u, p, g, a);
         LStudent.addStudent((Student)user);
 	System.out.println("Great job, we've made you an account and logged you in!");
+	mainMenu();
     }
 
     public void mainMenu() {
@@ -195,6 +201,7 @@ public class Woo {// driver
     public void logout() {
 
     }
+
 
     public static void main(String[] args) throws IOException, FileNotFoundException {
       try{

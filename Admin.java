@@ -4,7 +4,12 @@ public class Admin extends User {
         super(u, p);
     }
 
-    public void generateSchedules() {
+    public void generateSchedules(int id) {
+	if (id > LStudent.biggestID)
+	    break;
+	else {
+	    for (Course c:LStudent.getStudent(id).getWants()) {
+		
 	
     }
 
