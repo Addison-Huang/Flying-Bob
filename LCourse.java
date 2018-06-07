@@ -2,11 +2,7 @@ import java.util.ArrayList;
 
 public class LCourse {
     //instance vars
-    private static ArrayList<Course> courses;
-
-    public LCourse() {
-	courses = new ArrayList();
-    }
+    private static ArrayList<Course> courses = new ArrayList();
 
     //methods
     public static void printCourses() {

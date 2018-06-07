@@ -88,18 +88,23 @@ public class Student extends User implements Comparable {
 	}
     }
 
-    public boolean chooseClasses() {
-	LCourse.printCourses();
-	System.out.println("Type the name of the courses you want to apply for. You must pick 5");
-	for (int i = 0; i < 5; i ++) {
-	    String a = IOTools.readLine();
-	    ArrayList<Course> courses = LCourse.getCourses();
-	    for (int j = 0; j < courses.size(); j ++) {
-		if (a == courses.get(j).getSubject()) {
-		    courses.get(j).addStudent(this);
+    public void chooseClasses() {
+	if ((LCourse.getCourses()).size() == 0) {
+	    System.out.println("There are no classes");
+	}
+	else {
+	    LCourse.printCourses();
+	    System.out.println("Type the name of the courses you want to apply for. You must pick 5");
+	    for (int i = 0; i < 5; i ++) {
+		String a = IOTools.readLine();
+		ArrayList<Course> courses = LCourse.getCourses();
+		for (int j = 0; j < courses.size(); j ++) {
+		    if (a == courses.get(j).getSubject()) {
+			courses.get(j).addStudent(this);
+		    }
 		}
-	    }
-	}	     
-	return true;
+	    }	     
+	}
     }
+    
 }

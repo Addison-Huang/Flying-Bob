@@ -39,15 +39,6 @@ public class Admin extends User {
          return LStudent.getStudent(id);
      }
 
-  public Student removeStudent(int id, LStudent L) {
-        return L.removeStudent(id);
-    }
-
-  public Student getStudent(int id, LStudent L) {
-        return L.getStudent(int id);
-    }
-
-
     public  boolean addStudentInfo(String info) {
         return true;
     }
