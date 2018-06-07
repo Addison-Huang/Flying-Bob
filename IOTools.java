@@ -7,6 +7,7 @@ import java.io.FileWriter;
 
 public class IOTools {
   public static final File save = new File("StudentData.csv");
+  public static final File Save = new File("CourseData.csv");
 
   public static String readString() {
     Scanner sc = new Scanner(System.in);
@@ -34,6 +35,15 @@ public class IOTools {
 
   public static void write(String s, boolean a) throws FileNotFoundException, IOException {
     Writer writer = new FileWriter(save, a); // the second parameter signifies that this is appending to the file
+                                             // instead of copying its contents and returning a slight variation of it
+    writer.write(s);
+    writer.close();
+  }
+  public static void writeCourse(String s, boolean a) throws FileNotFoundException, IOException {
+    if (!Save.exists()){
+      Save.createNewFile();
+    }
+    Writer writer = new FileWriter(Save, a); // the second parameter signifies that this is appending to the file
                                              // instead of copying its contents and returning a slight variation of it
     writer.write(s);
     writer.close();

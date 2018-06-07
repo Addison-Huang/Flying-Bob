@@ -2,6 +2,7 @@ import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
 import java.io.*;
+import java.util.PriorityQueue;
 
 public class Woo {// driver
 
@@ -143,10 +144,10 @@ public class Woo {// driver
         else {
           System.out.println("Incorrect combination. Try again.");
           login();
-          return;System.out.println("Great job, we've logged you in!");
+          return;
     }
-    
-   
+        System.out.println("Great job, we've logged you in!");
+    }
     public void makeAcct() {
 	System.out.println("Username?");
 	String u = IOTools.readLine();
@@ -196,6 +197,7 @@ public class Woo {// driver
     }
 
     public static void main(String[] args) throws IOException, FileNotFoundException {
+      try{
 	File file = new File("StudentData.csv");
         BufferedReader br = new BufferedReader(new FileReader(file));
         String st;
@@ -206,6 +208,57 @@ public class Woo {// driver
             LStudent.addStudent(a);
           }
         }
+      }
+      catch (FileNotFoundException e) {
+	    }
+      try {
+        String rost = "";
+        String rest = "";
+        File file = new File("CourseData.csv");
+         BufferedReader br = new BufferedReader(new FileReader(file));
+        String st;
+        while ((st = br.readLine()) != null){
+          if (st.equals("teacher,subject,period,waitlist|roster")){
+            for(int i = 0; i < st.length();i++ ){
+              if (st.charAt(i) == '|'){
+                if (st.length() - i != 1){
+                rost = st.substring(i);
+                }
+                else {
+                  rost = "";
+                }
+                rest = st.substring(0,i);
+              }
+            }
+            String[] Rest = rest.split(",");
+            String t = Rest[0];
+            String s = Rest[1];
+            int p = Integer.parseInt(Rest[2]);
+            PriorityQueue<Student> a = new PriorityQueue();
+            if (Rest.length > 3){
+              for(int i = 3; i < Rest.length; i++){
+                int id = Integer.parseInt(Rest[i]);
+                Student student = LStudent.getStudent(id);
+                a.add(student);
+            }
+            }
+            ArrayList<Student> b = new ArrayList();
+            if (rost.length() > 0){
+              String[] arr = rost.split(",");
+              for (String stu: arr){
+                int id = Integer.parseInt(stu);
+                Student student = LStudent.getStudent(id);
+                b.add(student);
+              }
+            }
+            Course c = new Course(t,s,p,a,b);
+            LCourse.addCourse(c);
+            
+          }
+        }
+      }
+      catch (FileNotFoundException e){}
+            
 	Woo n = new Woo();
 	n.loginPrompt();
     }

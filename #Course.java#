@@ -20,16 +20,6 @@ public class Course implements Comparable {
         waitlist = new PriorityQueue<Student>();
         roster = new ArrayList<Student>();
     }
-  public Course(String t, String s, int p, PriorityQueue<Student> students, ArrayList<Student> rost) {
-        teacher = t;
-        subject = s;
-        period = p;
-        numStudents = 0;
-        maxStudents = 34;
-
-        waitlist = students;
-        roster = rost;
-    }
 
     public String getTeacher() {
         return teacher;
