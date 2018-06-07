@@ -19,9 +19,9 @@ public class LCourse {
 	return "Added course " + c.getSubject() + "!";
     }
 
-    public static String removeCourse(Course c) {
-	//need to implement
-	return "Removed Course " + c.getSubject() + "!";
+    public static String removeCourse(int i) {
+	Course c = courses.remove(i);
+	return "Removed Course " + c + "!";
     }
 
     public static ArrayList<Course> getCourses() {
