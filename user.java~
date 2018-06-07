@@ -6,9 +6,6 @@ public abstract class User {
 	username = u;
 	password = p;
     }
-  public boolean check(String u, String p){
-    return username.equals(u) && username.equals(p);
-  }
     
     public String getUser() {
 	return username; 
