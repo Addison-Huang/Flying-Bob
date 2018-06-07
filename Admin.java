@@ -10,20 +10,10 @@ public class Admin extends User {
          return c;
      }
 
-     public Course removeCourse(Course c) {
-         System.out.println(LCourse.removeCourse(c));
+     public Course removeCourse(int i) {
+         System.out.println(LCourse.removeCourse(i));
          return c;
      }
-
-  public Course addCourse(Course c, LCourse L) {
-	System.out.println(L.addCourse(c));
-	return c;
-    }
-
-  public Course removeCourse(Course c, LCourse L) {
-	System.out.println(L.removeCourse(c));
-	return c;
-    }
 
 
      public void addStudent(Student s, Course c) {

@@ -96,7 +96,7 @@ public class Course implements Comparable {
     }
 
     public String toString() {
-	return subject + " " + teacher;
+	return "Subject: "+  subject + " Teacher: " + teacher + " Period: " + period;
     }
 
 }
