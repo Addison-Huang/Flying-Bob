@@ -143,9 +143,7 @@ public class Woo {// driver
         else {
           System.out.println("Incorrect combination. Try again.");
           login();
-          return;
-        }
-	System.out.println("Great job, we've logged you in!");
+          return;System.out.println("Great job, we've logged you in!");
     }
     
    

@@ -4,6 +4,9 @@ public class Admin extends User {
         super(u, p);
     }
 
+    public void generateSchedules() {
+	
+    }
 
      public Course addCourse(Course c) {
          System.out.println(LCourse.addCourse(c));
