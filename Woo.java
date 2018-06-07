@@ -1,6 +1,7 @@
 import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
+import java.io.*;
 
 public class Woo {// driver
 
@@ -194,7 +195,16 @@ public class Woo {// driver
     }
 
     public static void main(String[] args) throws IOException, FileNotFoundException {
-	// seed data from CSVs
+	File file = new File("StudentData.csv");
+        BufferedReader br = new BufferedReader(new FileReader(file));
+        String st;
+        while ((st = br.readLine()) != null){
+          if (!st.equals("Username,Password,Grade,GPA")){
+            String[] arr = st.split(",");
+            Student a = new Student(arr[0],arr[1],Integer.parseInt(arr[2]),Double.parseDouble(arr[3]));
+            LStudent.addStudent(a);
+          }
+        }
 	Woo n = new Woo();
 	n.loginPrompt();
     }
