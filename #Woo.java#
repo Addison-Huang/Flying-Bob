@@ -1,13 +1,12 @@
 import java.io.IOException;
 import java.io.FileNotFoundException;
 import java.util.ArrayList;
-import java.io.*;
 
 public class Woo {// driver
 
     private User user;
    private boolean studentAccount;
-   public void loginPrompt() throws IOException, FileNotFoundException {
+    public void loginPrompt() throws IOException, FileNotFoundException {
 	System.out.println("Hi there! Welcome to Flying Bob's Programming Program!");
 	if (!IOTools.checkSave()) { // if save file doesn't exist, there's no way for a user to be returning
 	    makeAcct();
@@ -78,15 +77,13 @@ public class Woo {// driver
 	}
 	if (option == 5) {
 	    System.out.println("type the id of the student you want to retrieve");
-	    int id = Integer.parseInt(IOTools.readLine());
-	    
+	    int id = Integer.parseInt(IOTools.readLine()); 
 	    Student s =((Admin)user).getStudent(id);
 	    System.out.println(s);
 	    mainMenu2();
 	}
 	if (option == 6) {
 	    System.out.println("lol");
-	    return;
 	}
 	if (option == 7) {
 	    System.out.println("Logging out...");
@@ -147,8 +144,7 @@ public class Woo {// driver
         }
 	System.out.println("Great job, we've logged you in!");
     }
-    
-   
+
     public void makeAcct() {
 	System.out.println("Username?");
 	String u = IOTools.readLine();
@@ -162,6 +158,7 @@ public class Woo {// driver
         user = new Student(u, p, g, a);
         LStudent.addStudent((Student)user);
 	System.out.println("Great job, we've made you an account and logged you in!");
+	mainMenu();
     }
 
     public void mainMenu() {
@@ -198,16 +195,7 @@ public class Woo {// driver
     }
 
     public static void main(String[] args) throws IOException, FileNotFoundException {
-	File file = new File("StudentData.csv");
-        BufferedReader br = new BufferedReader(new FileReader(file));
-        String st;
-        while ((st = br.readLine()) != null){
-          if (!st.equals("Username,Password,Grade,GPA")){
-            String[] arr = st.split(",");
-            Student a = new Student(arr[0],arr[1],Integer.parseInt(arr[2]),Double.parseDouble(arr[3]));
-            LStudent.addStudent(a);
-          }
-        }
+	// seed data from CSVs
 	Woo n = new Woo();
 	n.loginPrompt();
     }
