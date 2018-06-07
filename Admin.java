@@ -10,14 +10,13 @@ public class Admin extends User {
          return c;
      }
 
-     public Course removeCourse(int i) {
+     public void removeCourse(int i) {
          System.out.println(LCourse.removeCourse(i));
-         return c;
      }
 
 
-     public void addStudent(Student s, Course c) {
-         c.addStudent(s);
+     public void addStudent(Student s) {
+         LStudent.addStudent(s);
      }
 
 
