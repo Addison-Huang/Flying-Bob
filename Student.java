@@ -1,5 +1,4 @@
 import java.util.Stack;
-import java.util.Comparable;
 
 public class Student extends User implements Comparable{
 
@@ -65,7 +64,8 @@ public class Student extends User implements Comparable{
 			reverser.pop();
 		}
 	}
-  public int compareTo(Student s){
+  public int compareTo(Object a){
+    Student s = (Student)(a);
     if (this.getGrade() > s.getGrade()){
       return 1;
     }
@@ -89,3 +89,4 @@ public class Student extends User implements Comparable{
 		return true;
 	}
 }
+

@@ -1,6 +1,6 @@
 import java.util.PriorityQueue;
 
-public class Course {
+public class Course implements Comparable{
     private String teacher;
     private int period;
     private String subject;
@@ -69,6 +69,10 @@ public class Course {
     public PriorityQueue<Student> getWaitlist() {
 	return waitlist;
     }
+  public int compareTo(Object cour){
+    Course c = (Course) cour;
+    return this.getSubject().compareTo(c.getSubject());
+  }
 
     public PriorityQueue<Student> setWaitList(PriorityQueue<Student> s) {
 	PriorityQueue<Student> temp = new PriorityQueue();
