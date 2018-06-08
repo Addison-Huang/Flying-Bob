@@ -11,10 +11,20 @@ Programming
 ------------------------------------------
 OBSTACLES OVERCOME
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Reading and writing to CSVs. We have never done something like this in class and we did this by looking at the intertubes for guidance.
+
+- Completing our project with lack of sleep. We all decided to pull an all nighter the day before to finish this project so we could demo it to the class.
+
+- Implementing term two concepts. We had no idea how to implement term two concepts but once we started implementing concepts, it became easy.
+
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- We did not know how to generate schedules by using recursive backtracking. We strugged to do this on many keys to success to no avail. They ended up being keys to failure so we just ended up throwing the idea in the trash can.
+
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- 
+
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 LESSONS LEARNED
@@ -29,10 +39,20 @@ LESSONS LEARNED
     \____/_/ \_____\/ \___/_/   \_____\/ \_____\/ \_____\/ 
 ==============================================================
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
-2018-06-05
+2018-06-08
 --------------------------------------------------------------
-Jerry Ye :: Wrote new and most updated plan + updated readme 
+Addison Huang :: fine tuning the project part 2
+Jerry Ye :: fine tuning the project part 2
+Shayan Chowdhury :: fine tuning the project part 2
 ==============================================================
+
+2018-06-07
+--------------------------------------------------------------
+Addison Huang :: fine tuning the project part 1
+Jerry Ye :: fine tuning the project part 1
+Shayan Chowdhury :: fine tuning the project part 1
+==============================================================
+
 2018-06-04
 --------------------------------------------------------------
 Addison Huang :: Fixed bugs so the code could compile
