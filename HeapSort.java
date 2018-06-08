@@ -1,83 +1,106 @@
-//Jerry Ye
-//APCS02 pd02
-//HW51 -- Heaping Piles of Sordidness
-//2018-05-21
 import java.util.ArrayList;
-public class HeapSort{
-  public static int[] buildMinHeap(int[] mess){
-    for(int i = 1; i < mess.length; i ++){
-      for(int c = i;c != 0; c = (c-1)/2){
-        if (c == 0)
-          break;
-        int currentNode = mess[c];
-        int parentNode = mess[(c-1) / 2];
-        if (currentNode > parentNode){
-          break;
-        }
-        else{
-          mess[c] = parentNode;
-          mess[(c-1)/2] = currentNode;
-          //System.out.println(parentNode + "parent");
-          //          System.out.println(currentNode + "cur");
-        } 
-      }
-    }
-      return mess;
-    }
-  public static int[] heapSort(int[] nums){
-    buildMinHeap(nums);
-    //for (int a: nums){
-    //System.out.print(a+ " ");
-    // }
-    for(int i = nums.length-1; i > 0; i--){
-      remove(nums, i);
-      System.out.println("");
-      for (int a: nums){
-        System.out.print(a + " ");
-      }
-    }
-    return nums;
+import java.util.Random;
+import java.lang.reflect.Array;
+
+public class HeapSort<E extends Comparable<E>> {
+
+  public static void sort(E[] a, int n) {
+    heapsort(a, n - 1);
   }
-  public static void remove(int[] nums, int i){
-    int bound = i;
-    int min = nums[0];
-    nums[0] = nums[i];
-    nums[i] = min;
-    i = 0;
-    while (i < bound){
-      int rc = i*2 + 1;
-      int lc = i*2 +2;
-      int small = -1;
-      if (rc >= bound)
-        break;
-      if (lc >= bound)
-        small = rc;
-      else if (nums[rc] > nums[lc]){
-        small = lc;
-      }
-      else if(nums[lc] >= nums[rc]){
-        small = rc;
-      }
-      System.out.println(nums[small]);
-      if (nums[small] > nums[i]){
-        break;
-      }
-      else {
-        int temp = nums[small];
-        nums[small] = nums[i];
-        nums[i] = temp;
-        i = small;
-      }
-    }
+
+  public static void sort(ArrayList<E> list) {
+    E[] a = (E[]) list.toArray((E[]) Array.newInstance(list.get(0).getClass(), list.size()));
     
+    sort(a, list.size()); 
+    
+    for (int i = 0; i < a.length; i++)
+      list.set(i, a[i]);
   }
-  public static void main(String[] args){
-    int[] a = {1,3,8,5,6,9,10,4,3};
-    heapSort(a);
-    //buildMinHeap(a);
-    System.out.println("printing heap");
-    for( int c :a ){      
-      System.out.println(c);
+
+  private void heapsort(E[] a, int lastLeaf) {
+    buildMaxHeap(a, lastLeaf);
+
+   
+    while (lastLeaf > 0) {
+      swap(a, 0, lastLeaf);       
+      lastLeaf--;                 
+      maxHeapify(a, 0, lastLeaf);
     }
+  }
+
+ 
+  private void maxHeapify(E[] a, int i, int lastLeaf) {
+    int left = leftChild(i);    
+    int right = rightChild(i); 
+    int largest;  
+    
+    if (left <= lastLeaf && a[left].compareTo(a[i]) > 0)
+      largest = left; 
+    else
+      largest = i;    
+
+    
+    if (right <= lastLeaf && a[right].compareTo(a[largest]) > 0)
+      largest = right; 
+
+    if (largest != i) {
+      swap(a, i, largest);
+      maxHeapify(a, largest, lastLeaf);
+    }
+  }
+
+ 
+  private void buildMaxHeap(E[] a, int lastLeaf) {
+    int lastNonLeaf = (lastLeaf - 1) / 2; 
+    for (int j = lastNonLeaf; j >= 0; j--)
+      maxHeapify(a, j, lastLeaf);
+  }
+
+
+  private void swap(E[] a, int i, int j) {
+    E t = a[i];
+    a[i] = a[j];
+    a[j] = t;
+  }
+
+  
+  private static int leftChild(int i) {
+    return 2 * i + 1;
+  }
+
+  
+  private static int rightChild(int i) {
+    return 2 * i + 2;
+  }
+
+  
+  public static void printArray(Object[] a, int n) {
+    for (int i = 0; i < n; i++)
+      System.out.println(a[i]);
+  }
+
+  public static void main(String[] args) {
+    final int SIZE = 25;      // size of the array to sort
+    final int RANGE = 1000;   // upper limit of random ints generated
+
+    Integer a[] = new Integer[SIZE];
+    Random generator = new Random();
+    HeapSort<Integer> sorter = new HeapSort<Integer>();
+    ArrayList<Integer> list = new ArrayList<Integer>();
+
+    for (int i = 0; i < SIZE; i++) {
+      a[i] = new Integer(generator.nextInt(RANGE));
+      list.add(a[i]);
+    }
+
+    System.out.println("Original array:\n");
+    printArray(a, SIZE);
+    sorter.sort(a, SIZE);
+    System.out.println("\nSorted array:\n");
+    printArray(a, SIZE);
+    
+    System.out.println("Original ArrayList: " + list);
+    sorter.sort(list);
+    System.out.println("Sorted ArrayList: " + list);
   }
 }
