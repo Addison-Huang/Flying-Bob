@@ -42,8 +42,9 @@ public class LCourse {
 	return temp;
     }
     
-    public static ArrayList<Student> sortCourses() {
-		HeapSort.sort(courses);
+    public static ArrayList<Course> sortCourses() {
+      HeapSort h = new HeapSort();
+                h.sort(courses);
 		return courses;
     }
     

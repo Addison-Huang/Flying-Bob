@@ -56,7 +56,8 @@ public class LStudent {
 	}
 
 	public static ArrayList<Student> sortStudents() {
-		HeapSort.sort(students);
+          HeapSort h = new HeapSort();
+		h.sort(students);
 		return students;
 	}
 

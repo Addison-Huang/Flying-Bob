@@ -4,11 +4,11 @@ import java.lang.reflect.Array;
 
 public class HeapSort<E extends Comparable<E>> {
 
-  public static void sort(E[] a, int n) {
+  public void sort(E[] a, int n) {
     heapsort(a, n - 1);
   }
 
-  public static void sort(ArrayList<E> list) {
+  public void sort(ArrayList<E> list) {
     E[] a = (E[]) list.toArray((E[]) Array.newInstance(list.get(0).getClass(), list.size()));
     
     sort(a, list.size()); 
