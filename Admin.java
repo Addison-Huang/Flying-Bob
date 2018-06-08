@@ -8,7 +8,7 @@ public class Admin extends User {
         super(u, p);
     }
 
-    public void generateSchedules(int id) {
+    public void generateSchedules() {
         ArrayList<Course> c = LCourse.getCourses();
 	for (int i = 0; i < c.size(); i ++) {
 	    c.get(i).approveStudents();

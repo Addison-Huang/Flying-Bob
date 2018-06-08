@@ -68,7 +68,7 @@ public class Student extends User implements Comparable {
 	}
 	else {
 	    for (int i = 1; i <= schedule.size(); i++) {
-		System.out.println(i + " " + schedule.get(i).getTeacher() + " " + schedule.get(i).getSubject());
+		System.out.println("period: " +i + " teacher: " + schedule.get(i-1).getTeacher() + " subject: " + schedule.get(i-1).getSubject());
 	    }
 	}
     }
