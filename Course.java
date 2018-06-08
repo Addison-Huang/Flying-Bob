@@ -1,7 +1,10 @@
 import java.util.PriorityQueue;
 import java.util.ArrayList;
 
+//class Course
 public class Course implements Comparable {
+
+    //instance variables
     private String teacher;
     private String subject;
     private int period;
@@ -10,6 +13,7 @@ public class Course implements Comparable {
     private PriorityQueue<Student> waitlist;
     private ArrayList<Student> roster;
 
+    //constructor
     public Course(String t, String s, int p) {
         teacher = t;
         subject = s;
@@ -20,6 +24,7 @@ public class Course implements Comparable {
         waitlist = new PriorityQueue<Student>();
         roster = new ArrayList<Student>();
     }
+    //overloaded constructor
   public Course(String t, String s, int p, PriorityQueue<Student> students, ArrayList<Student> rost) {
         teacher = t;
         subject = s;
@@ -31,6 +36,7 @@ public class Course implements Comparable {
         roster = rost;
     }
 
+    //accessors and mutators
     public String getTeacher() {
         return teacher;
     }
@@ -105,6 +111,7 @@ public class Course implements Comparable {
         return temp;
     }
 
+    //overriden too string
     public String toString() {
 	return "Subject: "+  subject + " Teacher: " + teacher + " Period: " + period;
     }

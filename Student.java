@@ -117,8 +117,8 @@ public class Student extends User implements Comparable {
     }
 
 
-public String toString() {
-    return "name: " + username + " id: " + id + " GPA: " + gpa + " grade: " + grade;
-}
+    public String toString() {
+	return "name: " + username + " id: " + id + " GPA: " + gpa + " grade: " + grade;
+    }
     
 }

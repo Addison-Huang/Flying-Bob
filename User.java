@@ -1,15 +1,23 @@
+//Abstract class User
+ 
 public abstract class User {
+    //instance variables
     protected String username;
     protected String password;
 
+    //default constructor
     public User(String u, String p) {
 	username = u;
 	password = p;
     }
-  public boolean check(String u, String p){
-    return username.equals(u) && username.equals(p);
-  }
-    
+
+    //methods
+    /*checks if the username and password are correct */
+    public boolean check(String u, String p){
+	return username.equals(u) && username.equals(p);
+    }
+
+    //accessors and mutators
     public String getUser() {
 	return username; 
     }
