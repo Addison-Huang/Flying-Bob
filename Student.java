@@ -60,14 +60,19 @@ public class Student extends User implements Comparable {
     }
 
     public void printScheduleReverse() {
-	Stack<Course> reverser = new Stack();
-	for (Course x : schedule) {
-	    reverser.push(x);
+	if (schedule[0] == null) {
+	    System.out.println("You have no schedule");
 	}
-	while (!reverser.isEmpty()) {
-	    Course temp = reverser.peek();
-	    System.out.println(reverser.size() + " " + temp.getTeacher() + " " + temp.getSubject());
-	    reverser.pop();
+	else {
+	    Stack<Course> reverser = new Stack();
+	    for (Course x : schedule) {
+		reverser.push(x);
+	    }
+	    while (!reverser.isEmpty()) {
+		Course temp = reverser.peek();
+		System.out.println(reverser.size() + " " + temp.getTeacher() + " " + temp.getSubject());
+		reverser.pop();
+	    }
 	}
     }
 

@@ -170,10 +170,11 @@ public class Woo {// driver
     System.out.println("------------------------------");
     System.out.println("What would you like to do?");
     System.out.println("1. Print schedule");
-    System.out.println("2. Choose classes");
-    System.out.println("3. View stats");
-    System.out.println("4. Try to crack the admin password");
-    System.out.println("5. Logout");
+    System.out.println("2. Print schedule in reverse");
+    System.out.println("3. Choose classes");
+    System.out.println("4. View stats");
+    System.out.println("5. Try to crack the admin password");
+    System.out.println("6. Logout");
     System.out.println("------------------------------");
 
     int option = Integer.parseInt(IOTools.readLine());
@@ -182,22 +183,26 @@ public class Woo {// driver
       mainMenu();
     }
     if (option == 2) {
+	((Student) user).printScheduleReverse();
+	mainMenu();
+    }
+    if (option == 3) {
       ((Student) user).chooseClasses(1);
       mainMenu();
     }
-    if (option == 3) {
+    if (option == 4) {
       System.out.println("gpa: " + ((Student) user).getGPA());
       System.out.println("grade: " + ((Student) user).getGrade());
       mainMenu();
     }
-    if (option == 4) {
+    if (option == 5) {
       String adminPass = "12345678";
       System.out.println("Cracking results: " + crackPass(adminPass));
       System.out.println("You've successfully cracked the admin password!");
       System.out.println("You have been duly reported.");
       mainMenu();
     }
-    if (option == 5) {
+    if (option == 6) {
       System.out.println("Logging out...");
       return;
     }
