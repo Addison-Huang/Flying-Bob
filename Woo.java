@@ -131,7 +131,7 @@ public class Woo {// driver
 		}
 	}
 
-	public void login() {
+	public void login() throws IOException, FileNotFoundException{
 		System.out.println("Username?");
 		String u = IOTools.readLine();
 		System.out.println("Pass?");
@@ -140,7 +140,7 @@ public class Woo {// driver
 			int id = LStudent.checkStudent(u, p);
 			if (id != -1) {
 				user = LStudent.getStudent(id);
-				return;
+                                mainMenu();
 			} else {
 				System.out.println("Incorrect combination. Try again.");
 				login();

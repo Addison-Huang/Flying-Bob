@@ -22,7 +22,8 @@ public class Driver {
         courseData += "Mr. Ye,Math,1,1,3,3,4|2,3,4,1\n";
         courseData += "Mr. Hooper,English,1,1,3,3,4|2,3,4,1\n";
         courseData += "Ms. J,ComputerScience,1,1,3,3,4|2,3,4,1\n";
-        courseData += "Dr. Opus,1,1,3,3,4|2,3,4,1\n";
+        courseData += "Dr. Opus,1,2,3,3,4|2,3,4,1\n";
+        courseData += "Dr. Opus,Chemistry,3,3,3,4|2,3,4,1\n";
 
         IOTools.writeCourse(courseData, false);
     }
