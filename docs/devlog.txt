@@ -20,6 +20,7 @@ OBSTACLES OVERCOME
 UNRESOLVED ISSUES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 - We did not know how to generate schedules by using recursive backtracking. We strugged to do this on many keys to success to no avail. They ended up being keys to failure so we just ended up throwing the idea in the trash can.
+- We could not get schedules to save so we ended up just crying :(.
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
