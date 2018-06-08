@@ -10,6 +10,8 @@ public class Admin extends User {
 	else {
 	    for (Course c:LStudent.getStudent(id).getWants()) {
 		
+		
+		
 	
     }
 
