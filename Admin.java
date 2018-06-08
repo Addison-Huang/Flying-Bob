@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 //class admin extends user
 public class Admin extends User {
 
@@ -6,12 +8,21 @@ public class Admin extends User {
         super(u, p);
     }
 
-    
-    /*public void generateSchedules(int id) {
-        ArrayList<Course> c = getCourses();
+    public void generateSchedules(int id) {
+        ArrayList<Course> c = LCourse.getCourses();
 	for (int i = 0; i < c.size(); i ++) {
-	    c.get(i).
-	    }*/
+	    c.get(i).approveStudents();
+	}
+	LCourse.setCourses(c);
+	ArrayList<Student> s = LStudent.getStudents();
+	for (int j = 0; j < s.size(); j++) {
+	    ArrayList<Course> sched = Student.getSchedule();
+	    if (s.get(j).size() == 2) {
+		
+		
+	    
+    }
+	    
     
     //adds Course c to the list of courses
     public Course addCourse(Course c) {

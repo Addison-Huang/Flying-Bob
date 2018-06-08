@@ -10,6 +10,10 @@ public class LStudent {
 	students.add(s);
     }
 
+    public static ArrayList<Student> getStudents() {
+	return students;
+    }
+
     //checks if the username and password of a student match
     public static int checkStudent(String u, String p){
 	for (Student s: students){

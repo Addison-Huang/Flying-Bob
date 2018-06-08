@@ -19,18 +19,18 @@ public class Course implements Comparable {
         subject = s;
         period = p;
         numStudents = 0;
-        maxStudents = 34;
+        maxStudents = 5;
 
         waitlist = new PriorityQueue<Student>();
         roster = new ArrayList<Student>();
     }
     //overloaded constructor
-  public Course(String t, String s, int p, PriorityQueue<Student> students, ArrayList<Student> rost) {
+    public Course(String t, String s, int p, PriorityQueue<Student> students, ArrayList<Student> rost) {
         teacher = t;
         subject = s;
         period = p;
         numStudents = 0;
-        maxStudents = 34;
+        maxStudents = 5;
 
         waitlist = students;
         roster = rost;
@@ -116,4 +116,24 @@ public class Course implements Comparable {
 	return "Subject: "+  subject + " Teacher: " + teacher + " Period: " + period;
     }
 
+    public void approveStudents() {
+	if (maxStudents < waitlist.size()) {
+	    for (int i = 0; i < maxStudents; i++) {
+		roster.add(waitlist.poll());
+	    }
+	}
+	else {
+	    for (int i = 0; i < waitlist.size(); i++) {
+		roster.add(waitlist.poll());
+	    }
+	}
+	for (int i =0; i < roster.size(); i++) {
+	    roster.get(i).joinClass(this);
+	}
+    }
+
+    public void joinStudent(Student s) {
+	roster.add(s);
+    }
+	
 }

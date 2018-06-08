@@ -5,31 +5,33 @@ public class Student extends User implements Comparable {
 
     // instance variables
     private int id;
-    private Course[] schedule;
+    private ArrayList<Course> schedule;
     private int grade;
     private double gpa;
+    private boolean needFirst;
+    private boolean needSecond;
+    private boolean needThird;
 
     static int stdIDs = 1;
 
     public Student(String u, String p, int g, double a) {
 	super(u, p);
 	id = stdIDs++;
-	schedule = new Course[8];
+	schedule = new ArrayList();
 	grade = g;
 	gpa = a;
+	needFirst = needSecond = needThird = true;
     }
 
     // accessors and mutators
-    public Course[] getSchedule() {
+    public int size() {
+	return schedule.size();
+    }
+
+    public ArrayList<Course> getSchedule() {
 	return schedule;
     }
-
-    public Course[] setSchedule(Course[] s) {
-	Course[] temp = new Course[schedule.length];
-	schedule = s;
-	return temp;
-    }
-
+    
     public double getGPA() {
 	return gpa;
     }
@@ -49,18 +51,18 @@ public class Student extends User implements Comparable {
     }
 
     public void printSchedule() {
-	if (schedule[0] == null) {
+	if (schedule.get(0) == null) {
 	    System.out.println("You have no schedule");
 	}
 	else {
-	    for (int i = 1; i <= schedule.length; i++) {
-		System.out.println(i + " " + schedule[i].getTeacher() + " " + schedule[i].getSubject());
+	    for (int i = 1; i <= schedule.size(); i++) {
+		System.out.println(i + " " + schedule.get(i).getTeacher() + " " + schedule.get(i).getSubject());
 	    }
 	}
     }
 
     public void printScheduleReverse() {
-	if (schedule[0] == null) {
+	if (schedule.get(0) == null) {
 	    System.out.println("You have no schedule");
 	}
 	else {
@@ -115,6 +117,19 @@ public class Student extends User implements Comparable {
 	    }
 	        
 	}
+    }
+
+    public void joinClass(Course c) {
+	schedule.add(c);
+	if (c.getPeriod == 1) {
+	    needFirst = false;
+	}
+	else if (c.getPeriod == 2) {
+	    needSecond = false;
+	}
+	else if (c.getPeriod == 3) {
+	    needThird = false;
+	}	
     }
 
 
