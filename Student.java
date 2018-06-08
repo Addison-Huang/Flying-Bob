@@ -5,27 +5,45 @@ public class Student extends User implements Comparable {
 
     // instance variables
     private int id;
-    private ArrayList<Course> schedule;
+    public ArrayList<Course> schedule;
     private int grade;
     private double gpa;
     private boolean needFirst;
     private boolean needSecond;
     private boolean needThird;
+  private int[] filler;
 
     static int stdIDs = 1;
 
+  public Student(String u, String p, int g, double a, int[] fill) {
+	super(u, p);
+	id = stdIDs++;
+	schedule = new ArrayList();
+	grade = g;
+	gpa = a;
+        filler = fill;
+	needFirst = needSecond = needThird = true;
+    }
     public Student(String u, String p, int g, double a) {
 	super(u, p);
 	id = stdIDs++;
 	schedule = new ArrayList();
 	grade = g;
 	gpa = a;
+        filler = new int[1];
 	needFirst = needSecond = needThird = true;
     }
+  public void setSchedule(){
+    if (filler[0] != 0){
+      for (int i : filler){
+        schedule.add(LCourse.getCourse(i));
+      }
+    }
+  }
 
     // accessors and mutators
     public boolean getFirst() {
-	return needFirst;
+      return needFirst;
     }
 
     public boolean getSecond() {

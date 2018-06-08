@@ -54,6 +54,9 @@ public class Course implements Comparable {
     public int getPeriod() {
         return period;
     }
+  public boolean equals(Course c){
+    return teacher == c.getTeacher() && period == c.getPeriod();
+  }
 
     public int setPeriod(int p) {
         int temp = period;

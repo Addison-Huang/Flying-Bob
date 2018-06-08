@@ -14,6 +14,8 @@ public class Woo {// driver
 	public void loginPrompt() throws IOException, FileNotFoundException {
           IOTools.initStudents();
           IOTools.initCourses();
+          for (Student s : LStudent.getStudents())
+            s.setSchedule();
           System.out.println("Hi there! Welcome to Flying Bob's Programming Program!");
 		if (!IOTools.checkSave()) { // if save file doesn't exist, there's no way for a user to be returning
 			makeAcct();
@@ -141,6 +143,7 @@ public class Woo {// driver
 			if (id != -1) {
 				user = LStudent.getStudent(id);
                                 mainMenu();
+                                return;
 			} else {
 				System.out.println("Incorrect combination. Try again.");
 				login();
@@ -221,7 +224,11 @@ public class Woo {// driver
 		String courseDat = "Teacher,Subject,Period,Waitlist|Roster\n";
 
 		for (Student s : LStudent.getStudents()) {
-			String temp = s.getUser() + "," + s.getPass() + "," + s.getGrade() + "," + s.getGPA() + "\n";
+                  String sched = "";
+                  for (Course c: s.getSchedule()){
+                    sched += LCourse.searchCourse(c) + ",";
+                  }
+			String temp = s.getUser() + "," + s.getPass() + "," + s.getGrade() + "," + s.getGPA() + sched +  "\n";
 			studentDat += temp;
 		}
 		for (Course c : LCourse.getCourses()) {

@@ -12,6 +12,14 @@ public class LCourse {
 	    System.out.println(i +". " + courses.get(i));
 	}
     }
+  public static int searchCourse(Course c){
+    for(int i = 0; i < courses.size(); i ++){
+      if (courses.get(i).equals(c)){
+          return i;
+        }
+    }
+    return -1;
+  }
 
     //adds Course c to the list of courses
     public static String addCourse(Course c) {

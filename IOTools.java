@@ -63,8 +63,19 @@ public class IOTools {
 		while ((st = br.readLine()) != null) {
 			if (!st.equals("Username,Password,Grade,GPA")) {
 				String[] arr = st.split(",");
-				Student a = new Student(arr[0], arr[1], Integer.parseInt(arr[2]), Double.parseDouble(arr[3]));
-				LStudent.addStudent(a);
+                                if (arr.length == 4){
+                                  Student a = new Student(arr[0], arr[1], Integer.parseInt(arr[2]), Double.parseDouble(arr[3]));
+                                  LStudent.addStudent(a);
+                                }
+                                else {
+                                  int[] ar = new int[arr.length - 4];
+                                  int z = 0;
+                                  for (int i = 4; i < arr.length; i ++){
+                                    ar[z] = Integer.parseInt(arr[i]);
+                                    z ++;
+                                    Student a = new Student(arr[0], arr[1], Integer.parseInt(arr[2]), Double.parseDouble(arr[3]), ar);
+                                  }
+                                }
 			}
 		}
 		LStudent.sortStudents();
