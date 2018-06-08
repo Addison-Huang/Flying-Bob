@@ -209,6 +209,25 @@ public class Woo {// driver
   }
 
   public void logout() {
+    String studentDat = "Username,Password,Grade,GPA\n";
+    String courseDat = "teacher,subject,period,waitlist|roster";
+    for (Student s : LStudent){
+      String temp = s.getUser() + "," + s.getPass() + "," + s.getGrade() + "," + s.getGPA() +"\n";
+      studentDat = studentDat + temp;
+    }
+    for (Course c : LCourse){
+      String temp2 = "";
+      String temp3 = "";
+      for (Student s: C.getWaitList()){
+        temp2 += s.getId() + ",";
+      }
+      for (Student s: C.getRoster()){
+        temp3 += s.getId() + ",";
+      }
+      String temp = c.getTeacher() + "," + c.getSubject() + "," + c.getPeriod() + "," + temp2 + "|" + temp3;
+    }
+    
+    
 
   }
 

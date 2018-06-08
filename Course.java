@@ -86,6 +86,9 @@ public class Course implements Comparable {
         numStudents = s;
         return temp;
     }
+  public ArrayList getRoster(){
+    return roster;
+  }
 
     public void addStudent(Student s) {
         waitlist.add(s);
