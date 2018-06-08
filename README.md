@@ -9,7 +9,7 @@ Our project makes use of many of the algoirthms and data structures that we have
 ### Launch Instructions
 1. Clone the repo 
 
-`$ git clone https://github.com/raywu6/LosPepinos.git`
+`$ git clone https://github.com/ahuang20stuy/Flying-Bob.git`
 
 2. Compile Woo.java
 
@@ -22,4 +22,4 @@ Our project makes use of many of the algoirthms and data structures that we have
 4. Follow the in-terminal user prompts given to you. 
 Here lies administrator access, tread waters carefully! 
 User: admin
-Pass: admin
+Pass: 12345
