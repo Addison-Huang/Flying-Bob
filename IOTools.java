@@ -76,11 +76,11 @@ public class IOTools {
 		BufferedReader br = new BufferedReader(new FileReader(courseSave));
 		String st;
 		while ((st = br.readLine()) != null) {
-			if (st.equals("Teacher,Subject,Period,Waitlist|Roster")) {
+			if (!st.equals("Teacher,Subject,Period,Waitlist|Roster")) {
 				for (int i = 1; i < st.length(); i++) {
 					if (st.charAt(i) == '|') {
 						if (st.length() - i != 1) {
-							rost = st.substring(i);
+							rost = st.substring(i+1);
 						} else {
 							rost = "";
 						}

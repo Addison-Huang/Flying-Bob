@@ -12,7 +12,9 @@ public class Woo {// driver
 	String adminPass = "12345";
 
 	public void loginPrompt() throws IOException, FileNotFoundException {
-		System.out.println("Hi there! Welcome to Flying Bob's Programming Program!");
+          IOTools.initStudents();
+          IOTools.initCourses();
+          System.out.println("Hi there! Welcome to Flying Bob's Programming Program!");
 		if (!IOTools.checkSave()) { // if save file doesn't exist, there's no way for a user to be returning
 			makeAcct();
 		} else {
@@ -21,8 +23,8 @@ public class Woo {// driver
 			else
 				makeAcct();
 		}
-		IOTools.initStudents();
-		IOTools.initCourses();
+		//IOTools.initStudents();
+		//IOTools.initCourses();
 	}
 
 	public void mainMenu2() {
