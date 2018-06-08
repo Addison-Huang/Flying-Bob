@@ -1,5 +1,5 @@
 import java.util.ArrayList;
-e
+
 public class LCourse {
     //instance vars
     private static ArrayList<Course> courses = new ArrayList();
