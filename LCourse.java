@@ -34,6 +34,14 @@ public class LCourse {
     public static Course getCourse(int n) {
 	return courses.get(n);
     }
+
+    //mutator for courses
+    public static ArrayList<Course> setCourses(ArrayList<Course> c) {
+	ArrayList<Course> temp = courses;
+	courses = c;
+	return temp;
+    }
+	
 }
 
 
