@@ -1,6 +1,9 @@
 Teacher,Subject,Period,Waitlist|Roster
-Dr. Opus,1,2,3,3,4,9,4,10,|2,3,4,1,
-Dr. Opus,Chemistry,3,3,3,4,9,4,10,|2,3,4,1,
-Ms. J,ComputerScience,1,1,3,3,4,4,|2,3,4,1,
-Mr. Hooper,English,1,1,3,3,4,9,|2,3,4,1,
-Mr. Ye,Math,1,1,3,3,4,10,|2,3,4,1,
+Dr.Strange,Chemistry,3,15,22,13,14,|5,6,7,8,
+Ms.J,ComputerScience,3,12,10,11,|2,3,4,1,
+Mr.President,EmailHacking,1,15,22,13,14,|5,6,7,8,
+Mr.Hooper,English,2,22,12,11,10,|2,3,4,1,
+Dr.Opus,Genetics,2,15,14,13,|5,6,7,8,
+Mr.Ye,Math,1,12,10,11,|2,3,4,1,
+Mrs.Cool,USH,1,16,17,18,|9,10,11,12,
+
