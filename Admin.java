@@ -6,18 +6,13 @@ public class Admin extends User {
         super(u, p);
     }
 
-    /*
-    public void generateSchedules(int id) {
-        if (id > LStudent.biggestID)
-            return;
-        else {
-            for (Course c : LStudent.getStudent(id).getWants()) {
-
-            }
-        }
-    }
-    */
-
+    
+    /*public void generateSchedules(int id) {
+        ArrayList<Course> c = getCourses();
+	for (int i = 0; i < c.size(); i ++) {
+	    c.get(i).
+	    }*/
+    
     //adds Course c to the list of courses
     public Course addCourse(Course c) {
         System.out.println(LCourse.addCourse(c));

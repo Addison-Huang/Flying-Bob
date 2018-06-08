@@ -106,6 +106,7 @@ public class Student extends User implements Comparable {
 	    int selection = Integer.parseInt(IOTools.readLine());
 	    if (LCourse.getCourse(selection).getPeriod() == period) {
 		System.out.println("You picked " + LCourse.getCourse(selection));
+		LCourse.getCourse(selection).addStudent(this);
 		chooseClasses(period+1);
 	    }
 	    else {
