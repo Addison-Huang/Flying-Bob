@@ -183,8 +183,8 @@ public class Woo {// driver
       mainMenu();
     }
     if (option == 2) {
-	((Student) user).printScheduleReverse();
-	mainMenu();
+      ((Student) user).printScheduleReverse();
+      mainMenu();
     }
     if (option == 3) {
       ((Student) user).chooseClasses(1);
@@ -196,7 +196,7 @@ public class Woo {// driver
       mainMenu();
     }
     if (option == 5) {
-      String adminPass = "12345678";
+      String adminPass = "12345";
       System.out.println("Cracking results: " + crackPass(adminPass));
       System.out.println("You've successfully cracked the admin password!");
       System.out.println("You have been duly reported.");
@@ -280,7 +280,7 @@ public class Woo {// driver
   // Recursive Backtracking Password Cracker (RBPC) (patent-pending) by Bob
   public static String crackPass(String p) {
     return crackPass(p, "");
-}
+  }
 
   public static String crackPass(String pass, String guess) {
     // Base case: password and guess have same length
@@ -294,16 +294,22 @@ public class Woo {// driver
 
     String s = "";
 
-    for (int i = 0; i <= 9; i++) {
+    for (int i = 0; i < 9; i++) {
       // Adds a new int to guess
       guess += String.valueOf(i);
+      System.out.println("Current guess: " + guess);
       // Try to find pass with current guess
       s = crackPass(pass, guess);
+
       if (!s.equals("")) {
         return s;
       }
+
       // Bad guess, so remove the int and try again with the next
-      guess = guess.substring(0, guess.length() - 1);
+      String tmp = guess.substring(0, guess.length() - 1);
+      System.out.println(guess + " failed, backtracking to " + tmp);
+      guess = tmp;
+
     }
     // None of the ints have worked, so go up one level
     return "";
