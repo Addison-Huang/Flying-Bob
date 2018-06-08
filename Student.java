@@ -56,12 +56,7 @@ public class Student extends User implements Comparable {
 	return id;
     }
 
-    public int setId(int n) {
-	int temp = id;
-	id = n;
-	return temp;
-    }
-
+    //prints out the schedule of a student
     public void printSchedule() {
 	if (schedule.size() == 0) {
 	    System.out.println("You have no schedule");
@@ -73,6 +68,7 @@ public class Student extends User implements Comparable {
 	}
     }
 
+    //prints out the scedule of a student in reverse
     public void printScheduleReverse() {
 	if (schedule.size() == 0) {
 	    System.out.println("You have no schedule");
@@ -90,6 +86,7 @@ public class Student extends User implements Comparable {
 	}
     }
 
+    //comparesto method
     public int compareTo(Object a) {
 	Student s = (Student) (a);
 	if (this.getGrade() > s.getGrade()) {
@@ -107,6 +104,8 @@ public class Student extends User implements Comparable {
 	}
     }
 
+    //a student chooses a class
+    //one class for period 1, one class for period 2, one class for period 3
     public void chooseClasses(int period) {
 	if ((LCourse.getCourses()).size() == 0) {
 	    System.out.println("There are no classes");
@@ -131,6 +130,7 @@ public class Student extends User implements Comparable {
 	}
     }
 
+    //enrolls a student in a course
     public void joinClass(Course c) {
 	schedule.add(c);
 	if (c.getPeriod() == 1) {
@@ -144,7 +144,7 @@ public class Student extends User implements Comparable {
 	}	
     }
 
-
+    //overwritten toString
     public String toString() {
 	return "name: " + username + " id: " + id + " GPA: " + gpa + " grade: " + grade;
     }

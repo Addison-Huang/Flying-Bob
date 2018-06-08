@@ -10,11 +10,14 @@ public class LStudent {
 	students.add(s);
     }
 
+    //accesor for students
     public static ArrayList<Student> getStudents() {
 	return students;
     }
 
     //checks if the username and password of a student match
+    //returns the id of the student
+    //returns -1 if no student found
     public static int checkStudent(String u, String p){
 	for (Student s: students){
 	    if (s.check(u,p)){
@@ -50,11 +53,4 @@ public class LStudent {
 	}
 	return null;
     }
-    
-    //returns the biggest ID in the arrayList
-    public static int biggestID() {
-	return students.get(students.size()-1).getId();
-    }
-
-	
 }

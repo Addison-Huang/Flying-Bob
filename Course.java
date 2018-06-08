@@ -106,11 +106,6 @@ public class Course implements Comparable {
         return waitlist;
     }
 
-    public int compareTo(Object cour) {
-        Course c = (Course) cour;
-        return this.getSubject().compareTo(c.getSubject());
-    }
-
     public PriorityQueue<Student> setWaitList(PriorityQueue<Student> s) {
         PriorityQueue<Student> temp = new PriorityQueue();
         temp = waitlist;
@@ -118,11 +113,19 @@ public class Course implements Comparable {
         return temp;
     }
 
+    //compares to method
+    public int compareTo(Object cour) {
+        Course c = (Course) cour;
+        return this.getSubject().compareTo(c.getSubject());
+    }
+
     //overriden to string
     public String toString() {
 	return "Subject: "+  subject + " Teacher: " + teacher + " Period: " + period;
     }
 
+    //approves students based on their position in the waitlist
+    //approves all of the students until numStudents =  maxStudents
     public void approveStudents() {
 	if (maxStudents < waitlist.size()) {
 	    for (int i = 0; i < maxStudents; i++) {
@@ -139,6 +142,7 @@ public class Course implements Comparable {
 	}
     }
 
+    //adds student to the roster
     public void joinStudent(Student s) {
 	roster.add(s);
     }
