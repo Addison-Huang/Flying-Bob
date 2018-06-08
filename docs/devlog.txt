@@ -23,12 +23,17 @@ UNRESOLVED ISSUES
 
 COOL STUFF LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
-- 
+- How to better work with writing and reading files by storing data inside csv's 
+- Recursive backtracking is an algorithm that is used to randomly try to guess passwords which is why it takes so long to verify
 
 MID-DEVELOPMENT DESIGN CHANGES
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- We decided that it'd be best to not use recursive backtracking to generate schedules becaue we weren't able to fix out how to do this. Instead, we decided to add a password cracking feature to implement recursive backtracking instead. 
 LESSONS LEARNED
 ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+- Incrementally develop from an MVP
+- Meeting in person to code is a lot more helpful than doing it online! 
+- When you think development should only take x time, it'll probably take 10x time. 
 
  ______   ______   __   __   __       ______   _______     
 /_____/\ /_____/\ /_/\ /_/\ /_/\     /_____/\ /______/\    
@@ -41,16 +46,15 @@ LESSONS LEARNED
 ||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||||
 2018-06-08
 --------------------------------------------------------------
-Addison Huang :: fine tuning the project part 2
-Jerry Ye :: fine tuning the project part 2
-Shayan Chowdhury :: fine tuning the project part 2
+Addison Huang :: fine tuning the project part 2 by putting together the flow inside the main driver method, updated UML + flow to reflect design changes
+Jerry Ye :: fine tuning the project part 2 by working on writing and reading csv files + helped Addison create flow in driver's main method  , updated readme
+Shayan Chowdhury :: fine tuning the project part 2 by fleshing out recursive backtracking algorithm and seeding data
 ==============================================================
 
 2018-06-07
 --------------------------------------------------------------
-Addison Huang :: fine tuning the project part 1
-Jerry Ye :: fine tuning the project part 1
-Shayan Chowdhury :: fine tuning the project part 1
+Addison Huang :: Wrote basic MVP for driver class
+Jerry Ye :: Helped Addison write basic MVP for driver class, made student and course implement comparable 
 ==============================================================
 
 2018-06-04
