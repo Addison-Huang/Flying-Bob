@@ -7,10 +7,9 @@ public class LCourse {
 
     //prints out the available courses
     public static void printCourses() {
-	String retVal = "Current List of Courses Available: \n";
+	System.out.println("Current List of Courses Available: \n");
 	for (int i = 0; i < courses.size(); i++) {
-	    retVal += courses.get(i) + "/n"; 
-	    System.out.println(retVal);
+	    System.out.println(i +". " + courses.get(i));
 	}
     }
 

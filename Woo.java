@@ -182,7 +182,7 @@ public class Woo {// driver
       mainMenu();
     }
     if (option == 2) {
-      ((Student) user).chooseClasses();
+      ((Student) user).chooseClasses(1);
       mainMenu();
     }
     if (option == 3) {

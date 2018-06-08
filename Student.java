@@ -8,7 +8,6 @@ public class Student extends User implements Comparable {
     private Course[] schedule;
     private int grade;
     private double gpa;
-    private ArrayList<Course> wants;
 
     static int stdIDs = 1;
 
@@ -18,14 +17,9 @@ public class Student extends User implements Comparable {
 	schedule = new Course[8];
 	grade = g;
 	gpa = a;
-	wants = new ArrayList();
     }
 
     // accessors and mutators
-
-    public ArrayList<Course> getWants() {
-	return wants;
-    }
     public Course[] getSchedule() {
 	return schedule;
     }
@@ -94,23 +88,24 @@ public class Student extends User implements Comparable {
 	}
     }
 
-    public void chooseClasses() {
+    public void chooseClasses(int period) {
 	if ((LCourse.getCourses()).size() == 0) {
 	    System.out.println("There are no classes");
 	}
+	else if (period > 3) {
+	    return;
+	}
 	else {
 	    LCourse.printCourses();
-	    System.out.println("Type the number of the course you want to apply for. You must pick at least 5");
-	    System.out.println("Type -1 to leave when you are done");
-	    int i = 0;
-	    boolean leave = false;
-	    while (i < 5 && leave == false);
-	    int j = Integer.parseInt(IOTools.readLine());
-	    LCourse.getCourse(j).addStudent(this);
-	    wants.add(LCourse.getCourse(j));
-	    i++;
-	    if (j == -1 && i >= 5) {
-		return;
+	    System.out.println("Type the number of the course you want to apply for. You are picking for period " + period);
+	    int selection = Integer.parseInt(IOTools.readLine());
+	    if (LCourse.getCourse(selection).getPeriod() == period) {
+		System.out.println("You picked " + LCourse.getCourse(selection));
+		chooseClasses(period+1);
+	    }
+	    else {
+		System.out.println("Invalid choice");
+		chooseClasses(period);
 	    }
 	        
 	}
