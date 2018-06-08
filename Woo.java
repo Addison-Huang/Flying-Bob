@@ -140,7 +140,7 @@ public class Woo {// driver
       }
     }
     // add a way to check and return bool whether this set of data exists in csv
-    if (u.equals("admin") && p.equals("admin")) {
+    if (u.equals("admin") && p.equals("12345")) {
       user = new Admin(u, p);
       mainMenu2();
     } else {
@@ -211,17 +211,17 @@ public class Woo {// driver
   public void logout() {
     String studentDat = "Username,Password,Grade,GPA\n";
     String courseDat = "teacher,subject,period,waitlist|roster";
-    for (Student s : LStudent){
+    for (Student s : LStudent.getStudents()){
       String temp = s.getUser() + "," + s.getPass() + "," + s.getGrade() + "," + s.getGPA() +"\n";
       studentDat = studentDat + temp;
     }
-    for (Course c : LCourse){
+    for (Course c : LCourse.getCourses()){
       String temp2 = "";
       String temp3 = "";
-      for (Student s: C.getWaitList()){
+      for (Student s: c.getWaitList()){
         temp2 += s.getId() + ",";
       }
-      for (Student s: C.getRoster()){
+      for (Student s: c.getRoster()){
         temp3 += s.getId() + ",";
       }
       String temp = c.getTeacher() + "," + c.getSubject() + "," + c.getPeriod() + "," + temp2 + "|" + temp3;

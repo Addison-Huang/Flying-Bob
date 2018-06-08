@@ -24,6 +24,18 @@ public class Student extends User implements Comparable {
     }
 
     // accessors and mutators
+    public boolean getFirst() {
+	return needFirst;
+    }
+
+    public boolean getSecond() {
+	return needSecond;
+    }
+
+    public boolean getThird() {
+	return needThird;
+    }
+    
     public int size() {
 	return schedule.size();
     }
@@ -51,7 +63,7 @@ public class Student extends User implements Comparable {
     }
 
     public void printSchedule() {
-	if (schedule.get(0) == null) {
+	if (schedule.size() == 0) {
 	    System.out.println("You have no schedule");
 	}
 	else {
@@ -62,7 +74,7 @@ public class Student extends User implements Comparable {
     }
 
     public void printScheduleReverse() {
-	if (schedule.get(0) == null) {
+	if (schedule.size() == 0) {
 	    System.out.println("You have no schedule");
 	}
 	else {
@@ -121,13 +133,13 @@ public class Student extends User implements Comparable {
 
     public void joinClass(Course c) {
 	schedule.add(c);
-	if (c.getPeriod == 1) {
+	if (c.getPeriod() == 1) {
 	    needFirst = false;
 	}
-	else if (c.getPeriod == 2) {
+	else if (c.getPeriod() == 2) {
 	    needSecond = false;
 	}
-	else if (c.getPeriod == 3) {
+	else if (c.getPeriod() == 3) {
 	    needThird = false;
 	}	
     }

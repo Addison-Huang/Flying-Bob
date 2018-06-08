@@ -37,6 +37,10 @@ public class Course implements Comparable {
     }
 
     //accessors and mutators
+    public PriorityQueue<Student> getWaitList() {
+	return waitlist;
+    }
+
     public String getTeacher() {
         return teacher;
     }
@@ -86,7 +90,7 @@ public class Course implements Comparable {
         numStudents = s;
         return temp;
     }
-  public ArrayList getRoster(){
+  public ArrayList<Student> getRoster(){
     return roster;
   }
 
@@ -114,7 +118,7 @@ public class Course implements Comparable {
         return temp;
     }
 
-    //overriden too string
+    //overriden to string
     public String toString() {
 	return "Subject: "+  subject + " Teacher: " + teacher + " Period: " + period;
     }
@@ -138,5 +142,5 @@ public class Course implements Comparable {
     public void joinStudent(Student s) {
 	roster.add(s);
     }
-	
+
 }

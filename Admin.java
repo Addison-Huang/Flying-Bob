@@ -16,11 +16,33 @@ public class Admin extends User {
 	LCourse.setCourses(c);
 	ArrayList<Student> s = LStudent.getStudents();
 	for (int j = 0; j < s.size(); j++) {
-	    ArrayList<Course> sched = Student.getSchedule();
-	    if (s.get(j).size() == 2) {
+	    if (s.get(j).getFirst()) {
+		for (int i = 0; i < c.size(); i++) {
+		    if (c.get(i).getPeriod() == 1 && c.get(i).getNumStudents() < 5 ){
+			c.get(i).joinStudent(s.get(j));
+			s.get(j).joinClass(c.get(i));
+		    }
+		}
+	    }
+	   if (s.get(j).getSecond()) {
+		for (int i = 0; i < c.size(); i++) {
+		    if (c.get(i).getPeriod() == 2 && c.get(i).getNumStudents() < 5 ){
+			c.get(i).joinStudent(s.get(j));
+			s.get(j).joinClass(c.get(i));
+		    }
+		}
+	   }
+	   if (s.get(j).getThird()) {
+		for (int i = 0; i < c.size(); i++) {
+		    if (c.get(i).getPeriod() == 3 && c.get(i).getNumStudents() < 5 ){
+			c.get(i).joinStudent(s.get(j));
+			s.get(j).joinClass(c.get(i));
+		    }
+		}
+	    }
+	}
 		
-		
-	    
+	   
     }
 	    
     
