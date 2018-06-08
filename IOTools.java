@@ -77,7 +77,7 @@ public class IOTools {
 		String st;
 		while ((st = br.readLine()) != null) {
 			if (st.equals("Teacher,Subject,Period,Waitlist|Roster")) {
-				for (int i = 0; i < st.length(); i++) {
+				for (int i = 1; i < st.length(); i++) {
 					if (st.charAt(i) == '|') {
 						if (st.length() - i != 1) {
 							rost = st.substring(i);
